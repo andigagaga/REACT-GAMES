@@ -5,8 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'black-blue': 'rgba(0, 0, 0, 0.8)', // Sesuaikan nilai alpha untuk nuansa yang diinginkan
+      },
+    },
   },
   plugins: [],
 }
-
