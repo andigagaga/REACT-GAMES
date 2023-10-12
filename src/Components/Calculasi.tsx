@@ -40,77 +40,85 @@ export default function Calculasi2() {
 
   return (
     <>
-    {/* <Navbar/> */}
-    <div className="flex justify-center items-center h-screen bg-gradient-to-b from-blue-900 to-blue-600">
-      {showCard ? (
-        <form className="bg-white shadow-md p-6 rounded-lg w-96 space-y-6 transform translateY(0) opacity-100 transition-transform duration-500 ease-in-out">
-          <h1 className="text-center text-4xl font-bold text-blue-900">
-            Salary Calculator
-          </h1>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="Basic-Salary" className="block text-gray-700">
-                Basic Salary/gajipokok
-              </label>
-              <input
-                className="border p-2 w-full rounded-md focus:ring focus:ring-blue-300"
-                type="number"
-                id="Basic-Salary"
-                onChange={(e) => setGajiPokok(parseFloat(e.target.value))}
-              />
+      {/* <Navbar/> */}
+      <div className="flex justify-center items-center h-screen bg-gradient-to-b from-blue-900 to-blue-600">
+        {showCard ? (
+          <form className="bg-white shadow-md p-6 rounded-lg w-96 space-y-6 transform translateY(0) opacity-100 transition-transform duration-500 ease-in-out">
+            <h1 className="text-center text-4xl font-bold text-blue-900">
+              Salary Calculator
+            </h1>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="Basic-Salary" className="block text-gray-700">
+                  Basic Salary/gajipokok
+                </label>
+                <input
+                  className="border p-2 w-full rounded-md focus:ring focus:ring-blue-300"
+                  type="number"
+                  id="Basic-Salary"
+                  onChange={(e) => setGajiPokok(parseFloat(e.target.value))}
+                />
+              </div>
+              <div>
+                <label htmlFor="Basic-Salary" className="block text-gray-700">
+                  Allowance/tunjangan
+                </label>
+                <input
+                  className="border p-2 w-full rounded-md focus:ring focus:ring-blue-300"
+                  type="number"
+                  id="Basic-Salary"
+                  onChange={(e) => setTunjangan(parseFloat(e.target.value))}
+                />
+              </div>
+              <div>
+                <label htmlFor="Basic-Salary" className="block text-gray-700">
+                  Obligations/kewajiban pokok
+                </label>
+                <input
+                  className="border p-2 w-full rounded-md focus:ring focus:ring-blue-300"
+                  type="number"
+                  id="Basic-Salary"
+                  onChange={(e) =>
+                    setKewajibanPokok(parseFloat(e.target.value))
+                  }
+                />
+              </div>
             </div>
-            <div>
-              <label htmlFor="Basic-Salary" className="block text-gray-700">
-                Allowance/tunjangan
-              </label>
-              <input
-                className="border p-2 w-full rounded-md focus:ring focus:ring-blue-300"
-                type="number"
-                id="Basic-Salary"
-                onChange={(e) => setTunjangan(parseFloat(e.target.value))}
-              />
+            <div className="text-center">
+              <button
+                className="bg-blue-900 text-white p-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
+                type="button"
+                onClick={jumlahGaji}
+              >
+                Submit
+              </button>
             </div>
-            <div>
-              <label htmlFor="Basic-Salary" className="block text-gray-700">
-                Obligations/kewajiban pokok
-              </label>
-              <input
-                className="border p-2 w-full rounded-md focus:ring focus:ring-blue-300"
-                type="number"
-                id="Basic-Salary"
-                onChange={(e) => setKewajibanPokok(parseFloat(e.target.value))}
-              />
+            <div className="text-center space-y-2">
+              <h1 className="text-2xl">Result</h1>
+              <div>
+                <h2 className="text-blue-900">
+                  Gross Salary/gajikotor: {gajiKotor}
+                </h2>
+              </div>
+              <div>
+                <h2 className="text-blue-900">
+                  Basic Salary/gajipokok: {gajiPokok.toLocaleString("id-ID")}
+                </h2>
+              </div>
+              <div>
+                <h2 className="text-blue-900">
+                  Net Salary/gajibersih: {gajiBersih}
+                </h2>
+              </div>
             </div>
+          </form>
+        ) : (
+          <div className="text-white text-4xl font-bold">
+            Menunggu... {countdown}{" "}
+            {/* Menampilkan pesan selama waktu countdown */}
           </div>
-          <div className="text-center">
-            <button
-              className="bg-blue-900 text-white p-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
-              type="button"
-              onClick={jumlahGaji}
-            >
-              Submit
-            </button>
-          </div>
-          <div className="text-center space-y-2">
-            <h1 className="text-2xl">Result</h1>
-            <div>
-              <h2 className="text-blue-900">Gross Salary/gajikotor: {gajiKotor}</h2>
-            </div>
-            <div>
-              <h2 className="text-blue-900">Basic Salary/gajipokok: {gajiPokok}</h2>
-            </div>
-            <div>
-              <h2 className="text-blue-900">Net Salary/gajibersih: {gajiBersih}</h2>
-            </div>
-          </div>
-        </form>
-      ) : (
-        <div className="text-white text-4xl font-bold">
-          Menunggu... {countdown} {/* Menampilkan pesan selama waktu countdown */}
-        </div>
-      )}
-    </div>
+        )}
+      </div>
     </>
-    
   );
 }
