@@ -5,6 +5,7 @@ import Navbar from "./Navbars/Navbar";
 import Currency_converter from "./Components/Currency_converter";
 import TicTac from "./Components/TicTac-Toe";
 import Calculasi2 from "./Components/Calculasi";
+import MemeGenerator from "./Components/MemeGenerator";
 // import ButtonBack from "./Navbars/Button-Back";
 
 export default function App() {
@@ -22,6 +23,9 @@ export default function App() {
       </Routes>
       <Routes>
         <Route path="/Calculasi" element={<Calculasi2 />} />
+      </Routes>
+      <Routes>
+        <Route path="/Meme" element={<MemeGenerator />} />
       </Routes>
     
     </React.Fragment>
