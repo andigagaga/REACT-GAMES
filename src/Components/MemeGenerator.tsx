@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import ButtonBack from "../Navbars/Button-Back";
+
 export default function MemeGenerator() {
   const [image, setImage] = useState("");
 
@@ -24,6 +26,7 @@ export default function MemeGenerator() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-black-blue">
+      <ButtonBack/>
       <button
         className="bg-black text-white p-3 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition duration-300"
         onClick={generatorMeme}
