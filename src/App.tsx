@@ -1,19 +1,29 @@
 import React from "react";
-// import Latihan from "./Components/Latihan";
-import Currency_converter from "./Components/Currency_converter";
+import { Routes, Route} from "react-router-dom";
 
-import Calculasi2 from "./Components/Calculasi";
+import Navbar from "./Navbars/Navbar";
+import Currency_converter from "./Components/Currency_converter";
 import TicTac from "./Components/TicTac-Toe";
+import Calculasi2 from "./Components/Calculasi";
+// import ButtonBack from "./Navbars/Button-Back";
 
 export default function App() {
   return (
     <React.Fragment>
-      {/* <Latihan/> */}
-      
-
-     <Calculasi2/>
-     <TicTac/>
-     <Currency_converter/>
+      <Routes>
+        <Route path="/" element={<Navbar />} />
+      </Routes>
+      {/* <ButtonBack/> */}
+      <Routes>
+        <Route path="/Currency" element={<Currency_converter />} />
+      </Routes>
+      <Routes>
+        <Route path="/TicTac" element={<TicTac />} />
+      </Routes>
+      <Routes>
+        <Route path="/Calculasi" element={<Calculasi2 />} />
+      </Routes>
+    
     </React.Fragment>
   );
 }

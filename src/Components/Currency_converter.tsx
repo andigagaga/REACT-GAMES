@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ButtonBack from "../Navbars/Button-Back";
 
 export default function Currency_converter() {
   const [input, setInput] = useState("");
@@ -61,9 +62,11 @@ export default function Currency_converter() {
 
   return (
     <React.Fragment>
-      <div className="flex justify-center items-center h-screen bg-green-500">
-        <div className="flex flex-col items-center w-full mx-36 bg-white p-8 rounded-lg">
-          <h1 className="text-2xl mb-4 font-bold">Currency Converter</h1>
+      <div className="flex justify-center items-center h-screen bg-black-blue">
+
+        <div className="flex flex-col items-center w-full mx-36 bg-gray-700 p-8 rounded-lg">
+        <ButtonBack/>
+          <h1 className="text-2xl mb-4 font-bold text-white">Currency Converter</h1>
           <div className="mb-4 w-full">
             <input
               type="number"
@@ -103,7 +106,7 @@ export default function Currency_converter() {
             </button>
           </div>
           <div className="mt-4">
-            <h1 className="font-bold">
+            <h1 className="font-bold text-white">
               {hasil !== null ? `Result : ${hasil}` : "Result :"}
             </h1>
           </div>

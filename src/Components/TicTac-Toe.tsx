@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ButtonBack from "../Navbars/Button-Back";
 // import Navbar from "../Navbars/Navbar";
 
 type SquareProps = {
@@ -90,6 +91,7 @@ export default function TicTac() {
     <React.Fragment>
       {/* <Navbar /> */}
       <div className="flex justify-center items-center h-screen flex-col bg-black-blue">
+        <ButtonBack/>
         <h1 className="mb-12 text-6xl font-bold text-white">Tic Tac Toe</h1>
         <div className="bg-gray-900 text-white mb-8 rounded-lg p-2 font-bold">
           {status}

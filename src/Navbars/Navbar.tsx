@@ -12,7 +12,7 @@ export default function Navbar() {
           <div className="flex justify-center m-4 mt-16 mb-6">
             <div className="border border-2 flex w-9/12 p-4 rounded-full justify-between bg-gray-900">
               <div>
-                <h2 className="text-white font-bold">Salary Calculator</h2>
+                <h2 className="text-white font-bold">Currency_Converter</h2>
                 <p className="text-white">
                   <span className="text-green-500">Easy,</span> React
                   (JavaScript), Function, Logic, Conditional Rendering
@@ -21,9 +21,9 @@ export default function Navbar() {
               <div>
                 <Link
                   className="border-2 p-2 rounded-full text-white bg-gray-500 hover:bg-gray-600 hover:border-gray-600 hover:transform hover:scale-105 hover:transition-transform duration-300"
-                  to={"/SalaryCalculator"}
+                  to={`/Currency`}
                 >
-                  Solve Challenge
+                  <button color="red">Solve Challenge</button>
                 </Link>
               </div>
             </div>
@@ -40,9 +40,28 @@ export default function Navbar() {
               <div>
                 <Link
                   className="border-2 p-2 rounded-full text-white bg-gray-500 hover:bg-gray-600 hover:border-gray-600 hover:transform hover:scale-105 hover:transition-transform duration-300"
-                  to={"/TicTacToe"}
+                  to={`/TicTac`}
                 >
-                  Solve Challenge
+                  <button color="red">Solve Challenge</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center m-4 mt-16 mb-6">
+            <div className="border border-2 flex w-9/12 p-4 rounded-full justify-between bg-gray-900">
+              <div>
+                <h2 className="text-white font-bold">Salary_Calculator</h2>
+                <p className="text-white">
+                  <span className="text-green-500">Easy,</span> React
+                  (JavaScript), Function, Logic, Conditional Rendering
+                </p>
+              </div>
+              <div>
+                <Link
+                  className="border-2 p-2 rounded-full text-white bg-gray-500 hover:bg-gray-600 hover:border-gray-600 hover:transform hover:scale-105 hover:transition-transform duration-300"
+                  to={`/Calculasi`}
+                >
+                  <button color="red">Solve Challenge</button>
                 </Link>
               </div>
             </div>

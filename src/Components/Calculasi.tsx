@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ButtonBack from "../Navbars/Button-Back";
 // import Navbar from "../Navbars/Navbar";
 
 export default function Calculasi2() {
@@ -41,15 +42,17 @@ export default function Calculasi2() {
   return (
     <>
       {/* <Navbar/> */}
-      <div className="flex justify-center items-center h-screen bg-gradient-to-b from-blue-900 to-blue-600">
+      <div className="flex justify-center items-center h-screen bg-black-blue from-blue-900 to-blue-600">
+        
         {showCard ? (
-          <form className="bg-white shadow-md p-6 rounded-lg w-96 space-y-6 transform translateY(0) opacity-100 transition-transform duration-500 ease-in-out">
-            <h1 className="text-center text-4xl font-bold text-blue-900">
+          <form className="bg-gray-700 shadow-md p-6 rounded-lg w-96 space-y-6 transform translateY(0) opacity-100 transition-transform duration-500 ease-in-out">
+            <ButtonBack/>
+            <h1 className="text-center text-4xl font-bold text-blue-900 text-white">
               Salary Calculator
             </h1>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label htmlFor="Basic-Salary" className="block text-gray-700">
+                <label htmlFor="Basic-Salary" className="block text-gray-700 text-white">
                   Basic Salary/gajipokok
                 </label>
                 <input
@@ -60,7 +63,7 @@ export default function Calculasi2() {
                 />
               </div>
               <div>
-                <label htmlFor="Basic-Salary" className="block text-gray-700">
+                <label htmlFor="Basic-Salary" className="block text-gray-700 text-white">
                   Allowance/tunjangan
                 </label>
                 <input
@@ -71,7 +74,7 @@ export default function Calculasi2() {
                 />
               </div>
               <div>
-                <label htmlFor="Basic-Salary" className="block text-gray-700">
+                <label htmlFor="Basic-Salary" className="block text-gray-700 text-white">
                   Obligations/kewajiban pokok
                 </label>
                 <input
@@ -94,25 +97,26 @@ export default function Calculasi2() {
               </button>
             </div>
             <div className="text-center space-y-2">
-              <h1 className="text-2xl">Result</h1>
+              <h1 className="text-2xl text-white">Result</h1>
               <div>
-                <h2 className="text-blue-900">
+                <h2 className="text-blue-900 text-white">
                   Gross Salary/gajikotor: {gajiKotor}
                 </h2>
               </div>
               <div>
-                <h2 className="text-blue-900">
+                <h2 className="text-blue-900 text-white">
                   Basic Salary/gajipokok: {gajiPokok.toLocaleString("id-ID")}
                 </h2>
               </div>
               <div>
-                <h2 className="text-blue-900">
+                <h2 className="text-blue-900 text-white">
                   Net Salary/gajibersih: {gajiBersih}
                 </h2>
               </div>
             </div>
           </form>
         ) : (
+          
           <div className="text-white text-4xl font-bold">
             Menunggu... {countdown}{" "}
             {/* Menampilkan pesan selama waktu countdown */}
