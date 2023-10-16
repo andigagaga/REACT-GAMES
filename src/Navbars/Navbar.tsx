@@ -85,6 +85,25 @@ export default function Navbar() {
               </div>
             </div>
           </div>
+          <div className="flex justify-center m-4 mt-16 mb-6">
+            <div className="border border-2 flex w-9/12 p-4 rounded-full justify-between bg-gray-900">
+              <div>
+                <h2 className="text-white font-bold">Time_Count_Duration</h2>
+                <p className="text-white">
+                  <span className="text-green-500">Easy,</span> React
+                  (JavaScript), Function, Logic, Conditional Rendering
+                </p>
+              </div>
+              <div>
+                <Link
+                  className="border-2 p-2 rounded-full text-white bg-gray-500 hover:bg-gray-600 hover:border-gray-600 hover:transform hover:scale-105 hover:transition-transform duration-300"
+                  to={`/TimeCount`}
+                >
+                  <button className="text-white font-bold">Solve Challenge</button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </React.Fragment>

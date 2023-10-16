@@ -6,6 +6,7 @@ import Currency_converter from "./Components/Currency_converter";
 import TicTac from "./Components/TicTac-Toe";
 import Calculasi2 from "./Components/Calculasi";
 import MemeGenerator from "./Components/MemeGenerator";
+import TimeCountDuration from "./Components/TimeCountDuration";
 // import ButtonBack from "./Navbars/Button-Back";
 
 export default function App() {
@@ -26,6 +27,9 @@ export default function App() {
       </Routes>
       <Routes>
         <Route path="/Meme" element={<MemeGenerator />} />
+      </Routes>
+      <Routes>
+        <Route path="/TimeCount" element={<TimeCountDuration />} />
       </Routes>
     
     </React.Fragment>
